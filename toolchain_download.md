@@ -13,5 +13,6 @@ gcc --version; g++ --version
 ```
 After updating the GCC to version 12 and restarting the terminal
 
-![WhatsApp Image 2023-08-19 at 4 58 01 PM](https://github.com/ani171/pes_asic_class/assets/97838595/d6225229-73e7-4d02-8af4-3bd998cf15c8)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/cf717c06-1e7f-4499-8b2e-21a5ac0edbe1)
+
 

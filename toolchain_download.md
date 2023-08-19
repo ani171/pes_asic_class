@@ -1,5 +1,5 @@
 ![WhatsApp Image 2023-08-19 at 4 52 04 PM](https://github.com/ani171/pes_asic_class/assets/97838595/74d00fa2-3ffa-444d-a243-6566a2b010a1)
-Error found as the gcc wasn't version 12. To update GCC to 12.a.b version:
+Error found as the gcc wasn't of version 12. To update GCC to version 12
 
 ```sudo apt update
 sudo apt upgrade

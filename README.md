@@ -34,8 +34,58 @@ Instruction set architecture or computer architecture is an abstract model of th
 Application software ---> System software ---> Hardware
 - System Software converts application software into binary language
 - It has three major parts:
--- Operating system
--- Compiler
--- Assembler
+  1. Operating system
+  2. Compiler
+  3. Assembler
+-The operating system acts on small functions present in C, C++, Java, or any other language codes and gives it to the Compiler which in turn generates the .exe file which has all the Instructions. The .exe file is fed into the assembler, which generated the Machine Language code through which hardware can be implemented
+### Type of Instructions
+- Pseudo Instructions
+- Base Integer Instructions(RV64I)
+- Multiply Extension(RV64M)
+- Single and Double precision floating point Extension(RV64F and RV64D)
+#### Application Binary Interface
+These are the keywords through which programmers can access the registers of RISC-V. They are basically the **System functions** associated with the RISC-V registers
+
+### LAB-1
+Write a program to calculate the sum of numbers from 1 to n
+```
+#include <stdio.h>
+int main(){
+  int i,sum=0,n=10;
+  for(i=1;i<=n;i++){
+    sum=sum+i;
+  }
+printf("Sum of numbers from 1 to %d is %d",n,sum);
+}
+```
+- To execute the above type in the following commands
+```
+gcc sum.c
+./a.out
+```
+- To display the code present in the .c file
+```
+cat sum.c
+```
+- To compile the C language code using RISC-V Compiler (Using O1)
+```
+riscv64-unknown-elf-gcc -O1 -mabi=lb64 -march=rv64i -o sum.o sum.c
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/1435199c-922a-48e0-9bb8-3e160ff67580)
+If there is an error found as above, use the following commands and then re-run the compilation command
+```
+vim ~/.bashrc
+export PATH=~/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH
+export PATH=~/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH
+```
+- To view the assembly level code for the C program, which is compiled using RISC-V
+```
+riscv64-unknown-elf-objdump -d sum.o
+```
+
+
+  
+
+
 
 

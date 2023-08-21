@@ -179,7 +179,43 @@ Instruction: ``` add x8,x24,x8```
 Through the ABI names, we reserve some of these registers for certain purposes
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/3c47998d-33da-4a49-badd-6f3d99dafb29)
 
+### LAB
+- Using ABI Function calls (re-writing C program using ASM language)
 
+C program- .c file
+```
+#include <stdio.h>
+
+extern int load(int x, int y);
+
+int main()
+{
+  int result = 0;
+  int count = 9;
+  result = load(0x0, count+1);
+  printf("Sum of numbers from 1 to 9 is %d\n", result);
+}
+```
+Assembly file - .s file
+```
+.section .text
+.global load
+.type load, @function
+
+load:
+
+add a4, a0, zero
+add a2, a0, a1
+add a3, a0, zero
+
+loop:
+
+add a4, a3, a4
+addi a3, a3, 1
+blt a3, a2, loop
+add a0, a4, zero
+ret
+```
 
 
 

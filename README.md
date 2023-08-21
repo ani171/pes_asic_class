@@ -18,8 +18,7 @@ sudo update-alternatives --config gcc
 sudo update-alternatives --config g++
 gcc --version; g++ --version
 ```
-The above commands will update your gcc to version 12
-To check for successful installation run the below command and the output will be shown as depicted below
+The above commands will update your gcc to version 12. To check for successful installation run the below command and the output will be shown as depicted below
 ```
 riscv64-unknown-elf-gcc --version
 ```

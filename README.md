@@ -124,10 +124,64 @@ int main(){
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/c627c451-4da5-4039-aec1-d9cfb5ac89d3)
 
-- - Write a C program that shows the maximum and minimum values of "n" bit signed numbers
+- Write a C program that shows the maximum and minimum values of "n" bit signed numbers
+```
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+	int n=64;
+	long long int max = (long long int) (pow(2,n-1) -1);
+	long long int min = (long long int) (pow(2,n-1) *(-1));
+	printf("Minimum value is %lld\n",min);
+	printf("Max value is %lld\n",max);
+	return 0;
+}
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/7fad8130-2427-4101-93ed-4d95eba6a14b)
+
+## Day 2
+## Introduction to ABI and Basic Verification flow
+
+### Application Binary Interface
+- An Application Binary Interface is the interface between two binary program module programs allowing them to work together. It defines the interface between two software components or systems that are written in different programming languages, compiled by different compilers, or running on different hardware architectures.
+- ABI defines how your code is stored inside the library file, so that any program using your library can locate the desired function and execute it.
+
+### Double Words- Memory allocation
+Architecture can also be divided into two types based on the process of loading memory. Memory can be loaded in two ways
+1. Little Endian: In here, the least significant byte is at the lowest memory address, and the most significant byte is at the highest memory address.
+2. Big Endian: Here, the most significant byte is at the lowest memory address, and the least significant byte is at the highest memory address.
+
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/2745c597-e8d1-4ff9-8a52-a7001e178130)
+
+### Load, Add, and Store Instructions
+
+- Load Instruction
+Considering the instruction ```ld x8,16(x23)```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/775631b4-8e05-4194-ad01-27c17ee5ccda)
+
+- - Here ld represents loading of double word
+  - x8 is the destination register
+  - x23 is the source register which has the base address
+  - 16 is the offset which is added to the base address
+  - The base address and the offset are added to generate the Physical Address
+  - The content of the physical address is accessed and now loaded to the destination register i.e. x8 in here
+
+- Add Instruction
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/afc0bd1f-49a2-4d6b-8b4a-77f1770cf20a)
+Instruction: ``` add x8,x24,x8```
+- - Here add represents a normal adding arithmetic operation
+  - x8 is the destination register
+  - x24 is the source register 1
+  - x8 is the source register 2
+
+### 32 Registers and their general ABI Names
+Through the ABI names, we reserve some of these registers for certain purposes
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/3c47998d-33da-4a49-badd-6f3d99dafb29)
 
 
-  
+
+
 
 
 

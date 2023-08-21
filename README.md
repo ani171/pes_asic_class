@@ -67,9 +67,14 @@ gcc sum.c
 ```
 cat sum.c
 ```
-- To compile the C language code using RISC-V Compiler (Using O1)
+- To compile the C language code using RISC-V Compiler
+  1. O1 optimization
 ```
 riscv64-unknown-elf-gcc -O1 -mabi=lb64 -march=rv64i -o sum.o sum.c
+```
+  2. Ofast optimization
+```
+riscv64-unknown-elf-gcc -Ofast -mabi=lb64 -march=rv64i -o sum.o sum.c
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/1435199c-922a-48e0-9bb8-3e160ff67580)
 If there is an error found as above, use the following commands and then re-run the compilation command
@@ -78,10 +83,17 @@ vim ~/.bashrc
 export PATH=~/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH
 export PATH=~/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/riscv64-unknown-elf/bin:$PATH
 ```
-- To view the assembly level code for the C program, which is compiled using RISC-V
+- To view the assembly-level code for the C program, which is compiled using RISC-V
 ```
 riscv64-unknown-elf-objdump -d sum.o
+riscv64-unknown-elf-objdump -d sum.o | less
 ```
+- Output using O1 Optimization
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/2af6308f-5950-4241-bb34-4c366e2148b2)
+- Output using Ofast optimization
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/a3a17aff-e47a-4db7-ad7a-350895097c8f)
+
+#### Spike stimulation and debugging
 
 
   

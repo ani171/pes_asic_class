@@ -222,5 +222,11 @@ Compile the above using
 riscv64-unknown-elf-gcc -Ofat -mabi=lp64 -march=rv64i -o custom1to9.o custom1to9.c load.S
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/f2edf713-44dd-49fc-92c8-868112046471)
+To get the assembly-level code
+
+```
+riscv64-unknown-elf-objdump -d custom1to9.o |less
+```
+
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/a3b0636e-e4be-47e1-862b-ee46dffbd770)
 

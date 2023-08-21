@@ -95,9 +95,10 @@ riscv64-unknown-elf-objdump -d sum.o | less
 #### Spike stimulation and debugging
 ```
 spike pk sum.o
+spike -d pk sum.o
 ```
 The above command is used for debugging
-![image](https://github.com/ani171/pes_asic_class/assets/97838595/464c32a1-8306-433f-8c2c-c19f8adc7b02)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/2750abef-9d28-4641-bab4-f8c1c0d43309)
 - click on ENTER to show the first line and successive ENTER to show successive lines
 - click on q to quit the debug process
 

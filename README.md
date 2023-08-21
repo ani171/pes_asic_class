@@ -160,7 +160,7 @@ Architecture can also be divided into two types based on the process of loading 
 Considering the instruction ```ld x8,16(x23)```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/775631b4-8e05-4194-ad01-27c17ee5ccda)
 
-- - Here ld represents loading of double word
+  - Here ld represents loading of double word
   - x8 is the destination register
   - x23 is the source register which has the base address
   - 16 is the offset which is added to the base address
@@ -170,7 +170,7 @@ Considering the instruction ```ld x8,16(x23)```
 - Add Instruction
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/afc0bd1f-49a2-4d6b-8b4a-77f1770cf20a)
 Instruction: ``` add x8,x24,x8```
-- - Here add represents a normal adding arithmetic operation
+  - Here add represents a normal adding arithmetic operation
   - x8 is the destination register
   - x24 is the source register 1
   - x8 is the source register 2

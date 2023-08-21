@@ -1,6 +1,6 @@
 # pes_asic_class
 # VLSI Physical Design for ASIC's
-### Installation of RISC-V Toolchain
+## Installation of RISC-V Toolchain
 
 https://github.com/kunalg123/riscv_workshop_collaterals/blob/master/run.sh
 
@@ -24,4 +24,18 @@ To check for successful installation run the below command and the output will b
 riscv64-unknown-elf-gcc --version
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/c7b66c97-cca2-4393-983d-ea63087f87e4)
+
+## Day 1
+## Introduction  to RISC-V ISA and GNU Compiler Chain
+#### Instruction Set Architecture
+Instruction set architecture or computer architecture is an abstract model of the computer that defines how the CPU is controlled by the software. It acts as an interface between languages like C, C++, Java, and the hardware. The type of instructions depends on the type of hardware.
+
+### From Apps to Hardware
+Application software ---> System software ---> Hardware
+- System Software converts application software into binary language
+- It has three major parts:
+-- Operating system
+-- Compiler
+-- Assembler
+
 

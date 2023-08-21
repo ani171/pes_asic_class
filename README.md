@@ -93,6 +93,12 @@ riscv64-unknown-elf-objdump -d sum.o | less
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/a3a17aff-e47a-4db7-ad7a-350895097c8f)
 
 #### Spike stimulation and debugging
+```
+spike pk sum.o
+```
+The above command is used for debugging
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/464c32a1-8306-433f-8c2c-c19f8adc7b02)
+
 
 
   

@@ -45,7 +45,7 @@ Application software ---> System software ---> Hardware
 #### Application Binary Interface
 These are the keywords through which programmers can access the registers of RISC-V. They are basically the **System functions** associated with the RISC-V registers
 
-### LAB-1
+### LAB
 Write a program to calculate the sum of numbers from 1 to n
 ```
 #include <stdio.h>
@@ -98,7 +98,33 @@ spike pk sum.o
 ```
 The above command is used for debugging
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/464c32a1-8306-433f-8c2c-c19f8adc7b02)
+- click on ENTER to show the first line and successive ENTER to show successive lines
+- click on q to quit the debug process
 
+### Integer Number Representation
+- Unsigned numbers: are just like integers but they don't have a + or - sign associated with them.
+  Range: [0, (2^n)-1 ]
+- Signed numbers: these are a set of both positive and negative numbers
+  Range : [0, 2^(n-1)-1] to [-1 to 2^(n-1)]
+  To represent negative numbers in binary 2's complement methodology is used.
+### LAB
+- Write a C program that shows the maximum and minimum values of "n" bit unsigned numbers
+  Considering n=64 here
+```
+#include <stdio.h>
+#include <math.h>
+int main(){
+  int n=64;
+	unsigned long long int max = (unsigned long long int) (pow(2,n) -1);
+	unsigned long long int min = (unsigned long long int) (pow(2,n) *(-1));
+	printf("Minimum value is %llu\n",min);
+	printf("Maximum value is %llu\n",max);
+	return 0;
+}
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/c627c451-4da5-4039-aec1-d9cfb5ac89d3)
+
+- - Write a C program that shows the maximum and minimum values of "n" bit signed numbers
 
 
   

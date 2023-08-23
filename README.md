@@ -232,7 +232,10 @@ riscv64-unknown-elf-objdump -d custom1to9.o |less
 
 ### RISC-V CPU
 ### PICORV-32
-PicoRV-32 is a size-optimized RISC-V CPU Core that implements RISC-V RV32IMC Instruction Set.
+PicoRV-32 is a size-optimized RISC-V CPU Core that implements the RISC-V RV32IMC Instruction Set.
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/d06a8c6d-7546-4cae-b99b-0e137a259294)
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/3f26df7d-57bd-4d96-ae8d-b56f851bce32)
 
+
+## Day 3
+## Digital Logic with TL-Verilog and Markchip

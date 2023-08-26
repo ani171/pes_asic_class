@@ -240,7 +240,7 @@ PicoRV-32 is a size-optimized RISC-V CPU Core that implements the RISC-V RV32IMC
 
 ## Iverilog Design and testbench
 
--RTL Design is checked for adherence to the spec by simulating the design
+- RTL Design is checked for adherence to the spec by simulating the design
 - Simulator (Iverlog in here) is a tool used for checking the design ( aset of verilog codes in here)
 - Working of Simulator: The Simulator looks for changes in the input signal and evaluates the output. If the input values are changed, only then they are reflected in the changes in output values
 

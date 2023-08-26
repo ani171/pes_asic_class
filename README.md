@@ -236,6 +236,45 @@ PicoRV-32 is a size-optimized RISC-V CPU Core that implements the RISC-V RV32IMC
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/d06a8c6d-7546-4cae-b99b-0e137a259294)
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/3f26df7d-57bd-4d96-ae8d-b56f851bce32)
 
+## RTL Design using SKY130 Technology
 
-## Day 3
-## Digital Logic with TL-Verilog and Markchip
+## Iverilog Design and testbench
+
+-RTL Design is checked for adherence to the spec by simulating the design
+- Simulator (Iverlog in here) is a tool used for checking the design ( aset of verilog codes in here)
+- Working of Simulator: The Simulator looks for changes in the input signal and evaluates the output. If the input values are changed, only then they are reflected in the changes in output values
+
+### Testbench 
+- Testbench is an environment used to verify the correctness or soundness of a design or model.
+- TestBench does not have any primary inputs or outputs
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/726e3f71-c496-464b-9919-841548fe23de)
+
+### Iverilog Based Simulation flow
+- vcd file: A Value Change Dump file stores all the information about value changes in the simulator
+- GTKwave: It is a software, used as a simulation tool to verify the Verilog design code through a testbench.
+ 	```
+	sudo apt install gtkwave
+  	```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/c95028f6-66a5-49a6-a165-3a7bdd3310ba)
+
+## Yosys and Logic Synthesis
+- Yosys is a framework for Verilog RTL Synthesis.
+- Synthesizer: Tool used for converting RTL to netlist
+- Netlist: Representation of design in the form of standard cells present in .lib
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/09ce7b51-d138-40e2-9716-923632c49efc)
+
+### Installation of Yosys
+```
+git clone https://github.com/YosysHQ/yosys.git
+cd yosys
+sudo apt install make
+sudo apt-get update
+sudo apt-get install build-essential clang bison flex  libreadline-dev gawk tcl-dev libffi-dev git  graphviz xdot pkg-config python3 libboost-system-dev libboost-python-dev libboost-filesystem-dev zlib1g-dev
+make config-gcc
+make
+sudo make install
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/78a6bc41-60ee-4548-9766-e3c1d219371e)
+
+
+

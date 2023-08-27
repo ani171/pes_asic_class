@@ -327,5 +327,21 @@ make config-gcc
 make
 sudo make install
 ```
-![image](https://github.com/ani171/pes_asic_class/assets/97838595/78a6bc41-60ee-4548-9766-e3c1d219371e)
+- To invoke Yosys
+```
+cd VLSI/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+yosys
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/0ae756d0-5cd1-46b6-8ce6-ee3ee438f4bb)
 
+- To read the library
+`read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/8e4c9558-68da-469c-a4cf-d3d8d83ea1b5)
+
+- To read the design file
+`read_verilog good_mux.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/4def5432-1f87-4411-9955-6b88da86c445)
+
+- For synthesizing the module
+`synth -top good_mux`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/253347a1-65f9-4889-8e2d-e5ab7c8aa950)

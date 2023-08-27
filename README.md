@@ -257,30 +257,14 @@ PicoRV-32 is a size-optimized RISC-V CPU Core that implements the RISC-V RV32IMC
   	```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/c95028f6-66a5-49a6-a165-3a7bdd3310ba)
 
-## Yosys and Logic Synthesis
-- Yosys is a framework for Verilog RTL Synthesis.
-- Synthesizer: Tool used for converting RTL to netlist
-- Netlist: Representation of design in the form of standard cells present in .lib
-![image](https://github.com/ani171/pes_asic_class/assets/97838595/09ce7b51-d138-40e2-9716-923632c49efc)
-
-### Installation of Yosys
-```
-git clone https://github.com/YosysHQ/yosys.git
-cd yosys
-sudo apt install make
-sudo apt-get update
-sudo apt-get install build-essential clang bison flex  libreadline-dev gawk tcl-dev libffi-dev git  graphviz xdot pkg-config python3 libboost-system-dev libboost-python-dev libboost-filesystem-dev zlib1g-dev
-make config-gcc
-make
-sudo make install
-```
-![image](https://github.com/ani171/pes_asic_class/assets/97838595/78a6bc41-60ee-4548-9766-e3c1d219371e)
-
-### Logic Synthesis
+## Logic Synthesis
 
 - RTL Design: Behavioural representation of the required specification
+-  .lib: Collection of logical modules
+-  Synthesizer: Tool used for converting RTL to netlist
+-  Netlist: Representation of design in the form of standard cells present in .lib
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/2150b1cf-e724-42a7-ac34-4879fcc3c298)
-- .lib: Collection of logical modules
+
 
 **Need of different flavors of gates**
 - Combinational logic (Propagation Delay) determines the maximum speed of operation of the digital logic circuit
@@ -293,8 +277,29 @@ sudo make install
 - Fast Cells
 	- Fast cells use wider transistors to enable higher current carrying capacity. This allows for quicker charging and discharging of capacitive loads, resulting in faster signal transitions.
  	- Wider transistors generally consume more power compared to narrower ones due to the increased current flow and larger gate capacitance.
+	-While faster cells offer improved performance, they might have larger silicon area requirements due to the increased number of transistors. Additionally, they might be more susceptible to issues like noise and power consumption.
 
 - Slow Cells
 	- Slow cells use narrower transistors to reduce power consumption and minimize power dissipation.
 	- Narrower transistors consume less power due to their lower current carrying capacity and reduced gate capacitance.
+	- While slower cells consume less power, they might operate at lower clock frequencies and have longer signal propagation delays. This can impact their ability to process data quickly.
+
+- The choice between faster and slower cells depends on the specific requirements of the digital logic circuit's application. Designers often need to strike a balance between performance, power consumption, and area constraints.
+
+## Yosys
+- Yosys is a framework for Verilog RTL Synthesis.
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/09ce7b51-d138-40e2-9716-923632c49efc)
+
+**Installation of Yosys**
+```
+git clone https://github.com/YosysHQ/yosys.git
+cd yosys
+sudo apt install make
+sudo apt-get update
+sudo apt-get install build-essential clang bison flex  libreadline-dev gawk tcl-dev libffi-dev git  graphviz xdot pkg-config python3 libboost-system-dev libboost-python-dev libboost-filesystem-dev zlib1g-dev
+make config-gcc
+make
+sudo make install
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/78a6bc41-60ee-4548-9766-e3c1d219371e)
 

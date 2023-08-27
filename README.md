@@ -356,14 +356,18 @@ yosys
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/32f85e16-8411-46c0-a3ab-d64b2658931a)
 
 - To write netlist
-`write_verilog good_mux_netlist.v
-!gvim good_mux_netlist.v`
+```
+write_verilog good_mux_netlist.v
+!gvim good_mux_netlist.v
+```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/98495445-304b-4f7f-9d30-598f7f1fa380)
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/87cf80a8-b7e4-4fd7-8e50-16237068ebec)
 
 - To get a simplified version
-`write_verilog -noattr good_mux_netlist.v
-!gvim good_mux_netlist.v`
+```
+write_verilog -noattr good_mux_netlist.v
+!gvim good_mux_netlist.v
+```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/8a32b3ef-aa6f-4e2e-a29f-2f3658b909f8)
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/4387c026-5906-4dee-b7bd-51c4bf0c3f44)
 

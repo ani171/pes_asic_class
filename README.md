@@ -360,7 +360,7 @@ yosys
 write_verilog good_mux_netlist.v
 !gvim good_mux_netlist.v
 ```
-<img src=![image](https://github.com/ani171/pes_asic_class/assets/97838595/98495445-304b-4f7f-9d30-598f7f1fa380) width="50%" height="50%" />
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/98495445-304b-4f7f-9d30-598f7f1fa380)
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/87cf80a8-b7e4-4fd7-8e50-16237068ebec)
 
 - To get a simplified version

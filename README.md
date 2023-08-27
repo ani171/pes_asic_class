@@ -277,7 +277,7 @@ PicoRV-32 is a size-optimized RISC-V CPU Core that implements the RISC-V RV32IMC
 - Fast Cells
 	- Fast cells use wider transistors to enable higher current carrying capacity. This allows for quicker charging and discharging of capacitive loads, resulting in faster signal transitions.
  	- Wider transistors generally consume more power compared to narrower ones due to the increased current flow and larger gate capacitance.
-	-While faster cells offer improved performance, they might have larger silicon area requirements due to the increased number of transistors. Additionally, they might be more susceptible to issues like noise and power consumption.
+	- While faster cells offer improved performance, they might have larger silicon area requirements due to the increased number of transistors. Additionally, they might be more susceptible to issues like noise and power consumption.
 
 - Slow Cells
 	- Slow cells use narrower transistors to reduce power consumption and minimize power dissipation.

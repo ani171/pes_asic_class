@@ -277,7 +277,8 @@ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 - On executing this file `./a.out` an VCD file is dumped out of the simulator
 - Loading the file into GTKwave using the command `gtkwave tb_good_mux.vcd`
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/227e9d60-e736-40b9-ba23-7ca7f51c0845)
-![image](https://github.com/ani171/pes_asic_class/assets/97838595/00745329-b2f4-4299-930f-2a5a5bcbc07d)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/f77735ab-5559-47e7-b96f-d399c9a861e5)
+
 
 - For looking into the file structure `gvim tb_good_mux.v -o good_mux.v`
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/b7f938c7-7768-43fb-9aee-45a600758255)

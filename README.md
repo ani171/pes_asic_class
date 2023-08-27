@@ -276,5 +276,25 @@ sudo make install
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/78a6bc41-60ee-4548-9766-e3c1d219371e)
 
+### Logic Synthesis
 
+- RTL Design: Behavioural representation of the required specification
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/2150b1cf-e724-42a7-ac34-4879fcc3c298)
+- .lib: Collection of logical modules
+
+**Need of different flavors of gates**
+- Combinational logic (Propagation Delay) determines the maximum speed of operation of the digital logic circuit
+- T_clock > T_pd + T_cq + T_setup
+- To achieve maximum clock frequency, for better performance the delays should be as minimum as possible. This would mean that only faster cells are sufficient
+- But to ensure that there are no hold delay issues, gates are required to work slowly, creating a contractionary requirement
+- Therefore, for better performance fast cells are used  while to avoid hold-time delays slow cells are used.
+
+**Fast Cells v/s Slow Cells**
+- Fast Cells
+	- Fast cells use wider transistors to enable higher current carrying capacity. This allows for quicker charging and discharging of capacitive loads, resulting in faster signal transitions.
+ 	- Wider transistors generally consume more power compared to narrower ones due to the increased current flow and larger gate capacitance.
+
+- Slow Cells
+	- Slow cells use narrower transistors to reduce power consumption and minimize power dissipation.
+	- Narrower transistors consume less power due to their lower current carrying capacity and reduced gate capacitance.
 

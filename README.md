@@ -345,3 +345,25 @@ yosys
 - For synthesizing the module
 `synth -top good_mux`
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/253347a1-65f9-4889-8e2d-e5ab7c8aa950)
+
+- For realizing the logic in the verilog file
+`abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/3d8047da-02ef-4e02-a837-a7e79a434090)
+	- Number of input signals, output signals and internal signals can be known through above
+
+- To get the graphical version of the realized logic `show`
+	-The mux is completely realised in the form of sky130 library cells.
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/32f85e16-8411-46c0-a3ab-d64b2658931a)
+
+- To write netlist
+`write_verilog good_mux_netlist.v
+!gvim good_mux_netlist.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/98495445-304b-4f7f-9d30-598f7f1fa380)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/87cf80a8-b7e4-4fd7-8e50-16237068ebec)
+
+- To get a simplified version
+`write_verilog -noattr good_mux_netlist.v
+!gvim good_mux_netlist.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/8a32b3ef-aa6f-4e2e-a29f-2f3658b909f8)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/4387c026-5906-4dee-b7bd-51c4bf0c3f44)
+

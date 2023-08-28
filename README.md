@@ -264,27 +264,32 @@ PicoRV-32 is a size-optimized RISC-V CPU Core that implements the RISC-V RV32IMC
 </details>
 
 ## RTL Design using SKY130 Technology
-## Iverilog Design and testbench
+
+## Day 3 - Iverilog Design and Testbench
 
 - RTL Design is checked for adherence to the spec by simulating the design
 - Simulator (Iverlog in here) is a tool used for checking the design ( set of Verilog codes in here)
 - Working of Simulator: The Simulator looks for changes in the input signal and evaluates the output. If the input values are changed, only then they are reflected in the changes in output values
-
-### Testbench 
+<details>
+<summary>Testbench</summary> 
+	
 - Testbench is an environment used to verify the correctness or soundness of a design or model.
 - TestBench does not have any primary inputs or outputs
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/726e3f71-c496-464b-9919-841548fe23de)
-
-
-### Iverilog Based Simulation flow
+</details>
+<details>
+<summary>Iverilog Based Simulation flow</summary>
+	
 - vcd file: A Value Change Dump file stores all the information about value changes in the simulator
 - GTKwave: It is a software, used as a simulation tool to verify the Verilog design code through a testbench.
  	```
 	sudo apt install gtkwave
   	```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/c95028f6-66a5-49a6-a165-3a7bdd3310ba)
-
-### Labs using Iverilog and GTKwave
+</details>
+<details>
+<summary>Labs using Iverilog and GTKwave</summary>
+	
 ```
 mkdir VLSI
 cd VLSI
@@ -296,35 +301,34 @@ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/c18d9a86-b938-4f9c-a201-9b7c05d570f4)
 - verilog_files has all the source files and testbench files of the required standard cells ( has the design files)
 - for every file for example good_mux.v file there is a **tb_**good_mux.v file. We can see a one-to-one mapping between the Verilog Design file and it's testbench file
-
+<br>
 - Load both the design source file and testbench file into the verilog simulator (iverilog in here) `iverilog good_mux.v tb_good_mux.v`.
 - An `a.out` file is created.
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/5e2251e6-bb07-4790-aa2c-28ff9905ba71)
 - On executing this file `./a.out` an VCD file is dumped out of the simulator
 - Loading the file into GTKwave using the command `gtkwave tb_good_mux.vcd`
-![image](https://github.com/ani171/pes_asic_class/assets/97838595/227e9d60-e736-40b9-ba23-7ca7f51c0845)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/227e9d60-e736-40b9-ba23-7ca7f51c0845)<br>
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/f77735ab-5559-47e7-b96f-d399c9a861e5)
-
-
+<br>
 - For looking into the file structure `gvim tb_good_mux.v -o good_mux.v`
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/b7f938c7-7768-43fb-9aee-45a600758255)
-
-## Logic Synthesis
-
+</details>
+<details>
+<summary>Logic Synthesis</summary>
+	
 - RTL Design: Behavioural representation of the required specification
 -  .lib: Collection of logical modules
 -  Synthesizer: Tool used for converting RTL to netlist
 -  Netlist: Representation of design in the form of standard cells present in .lib
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/2150b1cf-e724-42a7-ac34-4879fcc3c298)
-
-
+<br>
 **Need of different flavors of gates**
 - Combinational logic (Propagation Delay) determines the maximum speed of operation of the digital logic circuit
 - T_clock > T_pd + T_cq + T_setup
 - To achieve maximum clock frequency, for better performance the delays should be as minimum as possible. This would mean that only faster cells are sufficient
 - But to ensure that there are no hold delay issues, gates are required to work slowly, creating a contractionary requirement
 - Therefore, for better performance fast cells are used  while to avoid hold-time delays slow cells are used.
-
+<br>
 **Fast Cells v/s Slow Cells**
 - Fast Cells
 	- Fast cells use wider transistors to enable higher current carrying capacity. This allows for quicker charging and discharging of capacitive loads, resulting in faster signal transitions.
@@ -337,11 +341,13 @@ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 	- While slower cells consume less power, they might operate at lower clock frequencies and have longer signal propagation delays. This can impact their ability to process data quickly.
 
 - The choice between faster and slower cells depends on the specific requirements of the digital logic circuit's application. Designers often need to strike a balance between performance, power consumption, and area constraints.
-
-## Yosys
+</details>
+<details>
+<summary>Yosys</summary>
+	
 - Yosys is a framework for Verilog RTL Synthesis.
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/09ce7b51-d138-40e2-9716-923632c49efc)
-
+<br>
 **Installation of Yosys**
 ```
 git clone https://github.com/YosysHQ/yosys.git
@@ -387,6 +393,7 @@ write_verilog good_mux_netlist.v
 !gvim good_mux_netlist.v
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/98495445-304b-4f7f-9d30-598f7f1fa380)
+<br>
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/87cf80a8-b7e4-4fd7-8e50-16237068ebec)
 
 - To get a simplified version
@@ -395,5 +402,6 @@ write_verilog -noattr good_mux_netlist.v
 !gvim good_mux_netlist.v
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/8a32b3ef-aa6f-4e2e-a29f-2f3658b909f8)
+<br>
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/4387c026-5906-4dee-b7bd-51c4bf0c3f44)
-
+</details>

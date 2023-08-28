@@ -172,14 +172,14 @@ int main(){
 <details>
 
 <summary>Double Words- Memory allocation</summary>
-Architecture can also be divided into two types based on the process of loading memory. Memory can be loaded in two ways
-1. Little Endian: In here, the least significant byte is at the lowest memory address, and the most significant byte is at the highest memory address.
+Architecture can also be divided into two types based on the process of loading memory. Memory can be loaded in two ways <br>
+1. Little Endian: In here, the least significant byte is at the lowest memory address, and the most significant byte is at the highest memory address.<br>
 2. Big Endian: Here, the most significant byte is at the lowest memory address, and the least significant byte is at the highest memory address.
 
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/2745c597-e8d1-4ff9-8a52-a7001e178130)
 </details>
-
-### Load, Add, and Store Instructions
+<details>
+<summary>Load, Add, and Store Instructions</summary>
 
 - Load Instruction
 Considering the instruction ```ld x8,16(x23)```
@@ -199,7 +199,7 @@ Instruction: ``` add x8,x24,x8```
   - x8 is the destination register
   - x24 is the source register 1
   - x8 is the source register 2
-
+</details>
 ### 32 Registers and their general ABI Names
 Through the ABI names, we reserve some of these registers for certain purposes
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/3c47998d-33da-4a49-badd-6f3d99dafb29)

@@ -420,6 +420,7 @@ write_verilog -noattr good_mux_netlist.v
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/c1f769f2-57e7-45ca-9863-6f028774fe6c)
 	- In the first line i.e. library("sky130_fd_sc_hd__tt_025C_1v80")
  		- Libraries can be slow, fast, or typical. Here `tt` stands for typical. The term typical (abbreviated as "tt") refers to the standard or average performance characteristics of a component or circuit under normal operating conditions.
+		- `025C` refers to the temperature at which the library's characteristics are specified.
      
 
 </details>

@@ -408,3 +408,18 @@ write_verilog -noattr good_mux_netlist.v
 <br>
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/4387c026-5906-4dee-b7bd-51c4bf0c3f44)
 </details>
+
+## Day 4 - Timing libs, Hierarchial and flat synthesis, and efficient flop coding styles
+
+<details>
+<summary>Introduction</summary>
+
+- .lib files
+	- To view the contents of .lib file
+ 	`gvim ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/c1f769f2-57e7-45ca-9863-6f028774fe6c)
+	- In the first line i.e. library("sky130_fd_sc_hd__tt_025C_1v80")
+ 		- Libraries can be slow, fast, or typical. Here `tt` stands for typical. The term typical (abbreviated as "tt") refers to the standard or average performance characteristics of a component or circuit under normal operating conditions.
+     
+
+</details>

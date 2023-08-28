@@ -54,7 +54,9 @@ Application software ---> System software ---> Hardware <br>
 These are the keywords through which programmers can access the registers of RISC-V. They are basically the **System functions** associated with the RISC-V registers
 </details>
 
-### LAB
+<details> 
+<summary>LAB</summary>
+	
 Write a program to calculate the sum of numbers from 1 to n
 ```
 #include <stdio.h>
@@ -110,7 +112,7 @@ The above command is used for debugging
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/2750abef-9d28-4641-bab4-f8c1c0d43309)
 - click on ENTER to show the first line and successive ENTER to show successive lines
 - click on q to quit the debug process
-
+</details>
 ### Integer Number Representation
 - Unsigned numbers: are just like integers but they don't have a + or - sign associated with them.
   Range: [0, (2^n)-1 ]

@@ -42,7 +42,6 @@ Application software ---> System software ---> Hardware <br>
 	- Operating system
 	- Compiler
 	- Assembler
- <br>
 - The operating system acts on small functions present in C, C++, Java, or any other language codes and gives it to the Compiler which in turn generates the .exe file which has all the Instructions. The .exe file is fed into the assembler, which generated the Machine Language code through which hardware can be implemented
 	
 ### Type of Instructions

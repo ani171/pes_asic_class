@@ -302,7 +302,6 @@ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/c18d9a86-b938-4f9c-a201-9b7c05d570f4)
 - verilog_files has all the source files and testbench files of the required standard cells ( has the design files)
 - for every file for example good_mux.v file there is a **tb_**good_mux.v file. We can see a one-to-one mapping between the Verilog Design file and it's testbench file
-<br>
 - Load both the design source file and testbench file into the verilog simulator (iverilog in here) `iverilog good_mux.v tb_good_mux.v`.
 - An `a.out` file is created.
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/5e2251e6-bb07-4790-aa2c-28ff9905ba71)

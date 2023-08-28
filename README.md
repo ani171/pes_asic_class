@@ -117,10 +117,10 @@ The above command is used for debugging
 ### Integer Number Representation
 <details>
 <summary>Introduction</summary>
-- Unsigned numbers: are just like integers but they don't have a + or - sign associated with them.
-  Range: [0, (2^n)-1 ]
+- Unsigned numbers: are just like integers but they don't have a + or - sign associated with them.<br>
+  Range: [0, (2^n)-1 ]<br>
 - Signed numbers: these are a set of both positive and negative numbers
-  Range : [0, 2^(n-1)-1] to [-1 to 2^(n-1)]
+  Range : [0, 2^(n-1)-1] to [-1 to 2^(n-1)] <br>
   To represent negative numbers in binary 2's complement methodology is used.
 </details>
 <details>

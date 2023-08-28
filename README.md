@@ -110,8 +110,8 @@ spike -d pk sum.o
 ```
 The above command is used for debugging
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/2750abef-9d28-4641-bab4-f8c1c0d43309)
-- click on ENTER to show the first line and successive ENTER to show successive lines
-- click on q to quit the debug process
+- Click on ENTER to show the first line and ENTER to show successive lines
+- Click on q to quit the debug process
 </details>
 
 ### Integer Number Representation
@@ -119,7 +119,7 @@ The above command is used for debugging
 <summary>Introduction</summary>
 - Unsigned numbers: are just like integers but they don't have a + or - sign associated with them.<br>
   Range: [0, (2^n)-1 ]<br>
-- Signed numbers: these are a set of both positive and negative numbers
+- Signed numbers: These are a set of both positive and negative numbers
   Range : [0, 2^(n-1)-1] to [-1 to 2^(n-1)] <br>
   To represent negative numbers in binary 2's complement methodology is used.
 </details>
@@ -167,13 +167,13 @@ int main(){
 <details>
 <summary>Introduction</summary>
 - An Application Binary Interface is the interface between two binary program module programs allowing them to work together. It defines the interface between two software components or systems that are written in different programming languages, compiled by different compilers, or running on different hardware architectures.
-- ABI defines how your code is stored inside the library file, so that any program using your library can locate the desired function and execute it.
+- ABI defines how your code is stored inside the library file so that any program using your library can locate the desired function and execute it.
 </details>
 <details>
 
 <summary>Double Words- Memory allocation</summary>
 Architecture can also be divided into two types based on the process of loading memory. Memory can be loaded in two ways <br>
-1. Little Endian: In here, the least significant byte is at the lowest memory address, and the most significant byte is at the highest memory address.<br>
+1. Little Endian: Here, the least significant byte is at the lowest memory address, and the most significant byte is at the highest memory address.<br>
 2. Big Endian: Here, the most significant byte is at the lowest memory address, and the least significant byte is at the highest memory address.
 
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/2745c597-e8d1-4ff9-8a52-a7001e178130)
@@ -185,7 +185,7 @@ Architecture can also be divided into two types based on the process of loading 
 Considering the instruction ```ld x8,16(x23)```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/775631b4-8e05-4194-ad01-27c17ee5ccda)
 
-  - Here ld represents loading of double word
+  - Here ld represents the loading of double-word
   - x8 is the destination register
   - x23 is the source register which has the base address
   - 16 is the offset which is added to the base address
@@ -200,11 +200,15 @@ Instruction: ``` add x8,x24,x8```
   - x24 is the source register 1
   - x8 is the source register 2
 </details>
-### 32 Registers and their general ABI Names
+<details>
+	
+<summary>32 Registers and their general ABI Names</summary>
+
 Through the ABI names, we reserve some of these registers for certain purposes
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/3c47998d-33da-4a49-badd-6f3d99dafb29)
-
-### LAB
+</details>
+<details>
+<summary>Labwork</summary>
 - Using ABI Function calls (re-writing C program using ASM language)
 
 C program- .c file
@@ -251,8 +255,8 @@ To get the assembly-level code
 ```
 riscv64-unknown-elf-objdump -d custom1to9.o |less
 ```
-
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/a3b0636e-e4be-47e1-862b-ee46dffbd770)
+</details>
 
 ### RISC-V CPU
 ### PICORV-32

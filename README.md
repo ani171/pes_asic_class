@@ -1,7 +1,7 @@
 # pes_asic_class
 # VLSI Physical Design for ASIC's
 <details>
-<summary>## Installation of RISC-V Toolchain</summary>
+<summary>Installation of RISC-V Toolchain</summary>
 
 https://github.com/kunalg123/riscv_workshop_collaterals/blob/master/run.sh
 
@@ -25,6 +25,7 @@ riscv64-unknown-elf-gcc --version
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/c7b66c97-cca2-4393-983d-ea63087f87e4)
 </details>
+
 ## Day 1
 ## Introduction  to RISC-V ISA and GNU Compiler Chain
 #### Instruction Set Architecture

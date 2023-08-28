@@ -311,7 +311,9 @@ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/f77735ab-5559-47e7-b96f-d399c9a861e5)
 <br>
 - For looking into the file structure `gvim tb_good_mux.v -o good_mux.v`
+
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/b7f938c7-7768-43fb-9aee-45a600758255)
+
 </details>
 <details>
 <summary>Logic Synthesis</summary>

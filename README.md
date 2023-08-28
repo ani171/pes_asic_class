@@ -55,7 +55,7 @@ These are the keywords through which programmers can access the registers of RIS
 </details>
 
 <details> 
-<summary>LAB</summary>
+<summary>Labwork for RISC-V Toolchain </summary>
 	
 Write a program to calculate the sum of numbers from 1 to n
 ```
@@ -113,13 +113,20 @@ The above command is used for debugging
 - click on ENTER to show the first line and successive ENTER to show successive lines
 - click on q to quit the debug process
 </details>
+
 ### Integer Number Representation
+<details>
+<summary>Introduction</summary>
 - Unsigned numbers: are just like integers but they don't have a + or - sign associated with them.
   Range: [0, (2^n)-1 ]
 - Signed numbers: these are a set of both positive and negative numbers
   Range : [0, 2^(n-1)-1] to [-1 to 2^(n-1)]
   To represent negative numbers in binary 2's complement methodology is used.
-### LAB
+</details>
+<details>
+	
+<summary>LAB</summary>
+
 - Write a C program that shows the maximum and minimum values of "n" bit unsigned numbers
   Considering n=64 here
 ```
@@ -151,6 +158,7 @@ int main(){
 }
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/7fad8130-2427-4101-93ed-4d95eba6a14b)
+</details>
 
 ## Day 2
 ## Introduction to ABI and Basic Verification flow

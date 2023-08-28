@@ -26,8 +26,8 @@ riscv64-unknown-elf-gcc --version
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/c7b66c97-cca2-4393-983d-ea63087f87e4)
 </details>
 
-## Day 1
-## Introduction  to RISC-V ISA and GNU Compiler Chain
+## Day 1-Introduction  to RISC-V ISA and GNU Compiler Chain
+
 <details>
 <summary>Instruction Set Architecture</summary>
 Instruction set architecture or computer architecture is an abstract model of the computer that defines how the CPU is controlled by the software. It acts as an interface between languages like C, C++, Java, and the hardware. The type of instructions depends on the type of hardware.
@@ -42,7 +42,7 @@ Application software ---> System software ---> Hardware <br>
 	- Operating system
 	- Compiler
 	- Assembler
-- The operating system acts on small functions present in C, C++, Java, or any other language codes and gives it to the Compiler which in turn generates the .exe file which has all the Instructions. The .exe file is fed into the assembler, which generated the Machine Language code through which hardware can be implemented
+- The operating system acts on small functions present in C, C++, Java, or any other language codes and gives it to the Compiler which in turn generates the .exe file which has all the Instructions. The .exe file is fed into the assembler, which generates the Machine Language code through which hardware can be implemented
 	
 ### Type of Instructions
 - Pseudo Instructions
@@ -160,12 +160,10 @@ int main(){
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/7fad8130-2427-4101-93ed-4d95eba6a14b)
 </details>
 
-## Day 2
-## Introduction to ABI and Basic Verification flow
+## Day 2 - Introduction to ABI and Basic Verification flow
 
-### Application Binary Interface
 <details>
-<summary>Introduction</summary>
+<summary>Application Binary Interface</summary>
 - An Application Binary Interface is the interface between two binary program module programs allowing them to work together. It defines the interface between two software components or systems that are written in different programming languages, compiled by different compilers, or running on different hardware architectures.
 - ABI defines how your code is stored inside the library file so that any program using your library can locate the desired function and execute it.
 </details>

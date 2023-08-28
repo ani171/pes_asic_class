@@ -209,8 +209,8 @@ Through the ABI names, we reserve some of these registers for certain purposes
 </details>
 <details>
 <summary>Labwork</summary>
-- Using ABI Function calls (re-writing C program using ASM language)
 
+Using ABI Function calls (re-writing C program using ASM language)
 C program- .c file
 ```
 #include <stdio.h>
@@ -257,15 +257,15 @@ riscv64-unknown-elf-objdump -d custom1to9.o |less
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/a3b0636e-e4be-47e1-862b-ee46dffbd770)
 </details>
-
-### RISC-V CPU
-### PICORV-32
+<details>
+<summary>RISC-V CPU (PICORV-32)</summary>
+	
 PicoRV-32 is a size-optimized RISC-V CPU Core that implements the RISC-V RV32IMC Instruction Set.
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/d06a8c6d-7546-4cae-b99b-0e137a259294)
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/3f26df7d-57bd-4d96-ae8d-b56f851bce32)
+</details>
 
 ## RTL Design using SKY130 Technology
-
 ## Iverilog Design and testbench
 
 - RTL Design is checked for adherence to the spec by simulating the design

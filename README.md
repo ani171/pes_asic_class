@@ -38,10 +38,11 @@ Instruction set architecture or computer architecture is an abstract model of th
 Application software ---> System software ---> Hardware
 - System Software converts application software into binary language
 - It has three major parts:
-  1. Operating system
-  2. Compiler
-  3. Assembler
+	- Operating system
+	- Compiler
+	- Assembler
 -The operating system acts on small functions present in C, C++, Java, or any other language codes and gives it to the Compiler which in turn generates the .exe file which has all the Instructions. The .exe file is fed into the assembler, which generated the Machine Language code through which hardware can be implemented
+	
 ### Type of Instructions
 - Pseudo Instructions
 - Base Integer Instructions(RV64I)
@@ -50,6 +51,7 @@ Application software ---> System software ---> Hardware
 #### Application Binary Interface
 These are the keywords through which programmers can access the registers of RISC-V. They are basically the **System functions** associated with the RISC-V registers
 </details>
+
 ### LAB
 Write a program to calculate the sum of numbers from 1 to n
 ```

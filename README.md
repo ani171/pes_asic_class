@@ -160,11 +160,11 @@ int main(){
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/7fad8130-2427-4101-93ed-4d95eba6a14b)
 </details>
 
-## Day 2 - Introduction to ABI and Basic Verification flow
+## Day 2 - Introduction to ABI and Basic Verification Flow
 
 <details>
 <summary>Application Binary Interface</summary>
-- An Application Binary Interface is the interface between two binary program module programs allowing them to work together. It defines the interface between two software components or systems that are written in different programming languages, compiled by different compilers, or running on different hardware architectures.
+- An Application Binary Interface is the interface between two binary program module programs allowing them to work together. It defines the interface between two software components or systems that are written in different programming languages, compiled by different compilers, or running on different hardware architectures.<br>
 - ABI defines how your code is stored inside the library file so that any program using your library can locate the desired function and execute it.
 </details>
 <details>

@@ -114,9 +114,8 @@ The above command is used for debugging
 - Click on q to quit the debug process
 </details>
 
-### Integer Number Representation
 <details>
-<summary>Introduction</summary>
+<summary>Integer Number Representation</summary>
 - Unsigned numbers: are just like integers but they don't have a + or - sign associated with them.<br>
   Range: [0, (2^n)-1 ]<br>
 - Signed numbers: These are a set of both positive and negative numbers
@@ -266,10 +265,12 @@ PicoRV-32 is a size-optimized RISC-V CPU Core that implements the RISC-V RV32IMC
 ## RTL Design using SKY130 Technology
 
 ## Day 3 - Iverilog Design and Testbench
-
+<details>
+<summary>Introduction</summary>
 - RTL Design is checked for adherence to the spec by simulating the design
 - Simulator (Iverlog in here) is a tool used for checking the design ( set of Verilog codes in here)
 - Working of Simulator: The Simulator looks for changes in the input signal and evaluates the output. If the input values are changed, only then they are reflected in the changes in output values
+</details>
 <details>
 <summary>Testbench</summary> 
 	

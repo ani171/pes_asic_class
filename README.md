@@ -35,7 +35,8 @@ Instruction set architecture or computer architecture is an abstract model of th
 
 <details> 
 <summary> From Apps to Hardware </summary>
-Application software ---> System software ---> Hardware
+Application software ---> System software ---> Hardware <br>
+
 - System Software converts application software into binary language
 - It has three major parts:
 	- Operating system

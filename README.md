@@ -41,7 +41,8 @@ Application software ---> System software ---> Hardware <br>
 - It has three major parts:
 	- Operating system
 	- Compiler
-	- Assembler <br>
+	- Assembler
+ <br>
 -The operating system acts on small functions present in C, C++, Java, or any other language codes and gives it to the Compiler which in turn generates the .exe file which has all the Instructions. The .exe file is fed into the assembler, which generated the Machine Language code through which hardware can be implemented
 	
 ### Type of Instructions
@@ -49,6 +50,7 @@ Application software ---> System software ---> Hardware <br>
 - Base Integer Instructions(RV64I)
 - Multiply Extension(RV64M)
 - Single and Double precision floating point Extension(RV64F and RV64D)
+
 #### Application Binary Interface
 These are the keywords through which programmers can access the registers of RISC-V. They are basically the **System functions** associated with the RISC-V registers
 </details>

@@ -348,6 +348,7 @@ git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
 - Yosys is a framework for Verilog RTL Synthesis.
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/09ce7b51-d138-40e2-9716-923632c49efc)
 <br>
+
 **Installation of Yosys**
 ```
 git clone https://github.com/YosysHQ/yosys.git

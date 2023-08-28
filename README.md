@@ -28,10 +28,13 @@ riscv64-unknown-elf-gcc --version
 
 ## Day 1
 ## Introduction  to RISC-V ISA and GNU Compiler Chain
-#### Instruction Set Architecture
+<details>
+<summary>Instruction Set Architecture</summary>
 Instruction set architecture or computer architecture is an abstract model of the computer that defines how the CPU is controlled by the software. It acts as an interface between languages like C, C++, Java, and the hardware. The type of instructions depends on the type of hardware.
+</details>
 
-### From Apps to Hardware
+<details> 
+<summary> From Apps to Hardware </summary>
 Application software ---> System software ---> Hardware
 - System Software converts application software into binary language
 - It has three major parts:
@@ -46,7 +49,7 @@ Application software ---> System software ---> Hardware
 - Single and Double precision floating point Extension(RV64F and RV64D)
 #### Application Binary Interface
 These are the keywords through which programmers can access the registers of RISC-V. They are basically the **System functions** associated with the RISC-V registers
-
+</details>
 ### LAB
 Write a program to calculate the sum of numbers from 1 to n
 ```

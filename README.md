@@ -117,7 +117,7 @@ The above command is used for debugging
 ### Integer Number Representation
 <details>
 <summary>Introduction</summary>
--**Unsigned numbers**: are just like integers but they don't have a + or - sign associated with them.<br>
+- Unsigned numbers: are just like integers but they don't have a + or - sign associated with them.<br>
   Range: [0, (2^n)-1 ]<br>
 - Signed numbers: these are a set of both positive and negative numbers
   Range : [0, 2^(n-1)-1] to [-1 to 2^(n-1)] <br>
@@ -125,7 +125,7 @@ The above command is used for debugging
 </details>
 <details>
 	
-<summary>LAB</summary>
+<summary>Lab</summary>
 
 - Write a C program that shows the maximum and minimum values of "n" bit unsigned numbers
   Considering n=64 here
@@ -164,15 +164,20 @@ int main(){
 ## Introduction to ABI and Basic Verification flow
 
 ### Application Binary Interface
+<details>
+<summary>Introduction</summary>
 - An Application Binary Interface is the interface between two binary program module programs allowing them to work together. It defines the interface between two software components or systems that are written in different programming languages, compiled by different compilers, or running on different hardware architectures.
 - ABI defines how your code is stored inside the library file, so that any program using your library can locate the desired function and execute it.
+</details>
+<details>
 
-### Double Words- Memory allocation
+<summary>Double Words- Memory allocation</summary>
 Architecture can also be divided into two types based on the process of loading memory. Memory can be loaded in two ways
 1. Little Endian: In here, the least significant byte is at the lowest memory address, and the most significant byte is at the highest memory address.
 2. Big Endian: Here, the most significant byte is at the lowest memory address, and the least significant byte is at the highest memory address.
 
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/2745c597-e8d1-4ff9-8a52-a7001e178130)
+</details>
 
 ### Load, Add, and Store Instructions
 

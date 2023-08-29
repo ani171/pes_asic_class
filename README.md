@@ -429,10 +429,10 @@ write_verilog -noattr good_mux_netlist.v
 <details>
 <summary>Hierarchy v/s Flat Synthesis</summary>
 Hierarchial Synthesis <br>
-- Hierarchical synthesis involves dividing the design into logical modules or blocks and synthesizing each module separately.
-- These modules can have their own hierarchies, and they communicate through well-defined interfaces
-- It enhances reusability, as individual modules can be reused in other designs.
-- Supports better scalability for large, complex designs.
+- Hierarchical synthesis involves dividing the design into logical modules or blocks and synthesizing each module separately.<br>
+- These modules can have their own hierarchies, and they communicate through well-defined interfaces<br>
+- It enhances reusability, as individual modules can be reused in other designs.<br>
+- Supports better scalability for large, complex designs.<br>
 <br>
 
 </details>

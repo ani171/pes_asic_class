@@ -412,18 +412,27 @@ write_verilog -noattr good_mux_netlist.v
 ## Day 4 - Timing libs, Hierarchial and flat synthesis, and efficient flop coding styles
 
 <details>
-<summary>Introduction</summary>
+<summary>Timing Dot libs</summary>
 
 - .lib files
 	- To view the contents of .lib file
  	`gvim ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/c1f769f2-57e7-45ca-9863-6f028774fe6c)
-	- Information regarding various parameters like technology, power, delay, current, resistance, and many others can be obtained through this.
+	- .lib files are used in digital circuit design to provide detailed information about the timing, power, and other characteristics of standard cells. 
 	- In the first line i.e. library("sky130_fd_sc_hd__tt_025C_1v80")
  		- Libraries can be slow, fast, or typical. Here `tt` stands for typical. The term typical (abbreviated as "tt") refers to the standard or average performance characteristics of a component or circuit under normal operating conditions.
 		- `025C` refers to the temperature at which the library's characteristics are specified.
 		- `1v80` is a representation of the supply voltage in volts. This voltage level serves as a reference point for understanding the circuit's behavior and performance under that specific operating voltage.
 		- `sc` represents standard cells signifies that the library contains standard cell information and characteristics for use in circuit design.
-	- 
+</details>
+
+<details>
+<summary>Hierarchy v/s Flat Synthesis</summary>
+**Hierarchial Synthesis**
+- Hierarchical synthesis involves dividing the design into logical modules or blocks and synthesizing each module separately.
+- These modules can have their own hierarchies, and they communicate through well-defined interfaces
+- It enhances reusability, as individual modules can be reused in other designs.
+- Supports better scalability for large, complex designs.
+<br>
 
 </details>

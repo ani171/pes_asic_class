@@ -502,7 +502,6 @@ In practice, a combination of both flat and hierarchical synthesis is often used
 <summary>Flop Coding Styles</summary>
 
 - A flip-flop is a bistable multivibrator circuit element that can store one bit of data. It has two stable states and can be used to represent binary information.
-<br>
 	
 #### Requirement of flops
 - Flip-flops are used in sequential circuits to store data and create a controlled timing mechanism. They can help eliminate glitches that may occur in combinational circuits

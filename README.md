@@ -503,15 +503,37 @@ In practice, a combination of both flat and hierarchical synthesis is often used
 
 - A flip-flop is a bistable multivibrator circuit element that can store one bit of data. It has two stable states and can be used to represent binary information.
 	
+
+
+#### Glitches
+Glitches are unwanted and unpredictable transitions in digital circuits that can occur due to variations in signal propagation delays.
+- Reasons for Glitches
+1.  Different gates have different propagation delays, and these delays can lead to temporary imbalances in signal timing. If inputs to different gates change at slightly different times, it can result in momentary glitches in the output.
+2. Signals may take different path lengths to reach different gates. Longer paths can introduce larger propagation delays, potentially causing timing mismatches and glitches.
+3. Race conditions occur when two or more signals arrive at a gate at nearly the same time, and the output of the gate depends on which signal arrives first. This can lead to unpredictable temporary output values before the circuit settles into a stable state.
+
 #### Requirement of flops
 - Flip-flops are used in sequential circuits to store data and create a controlled timing mechanism. They can help eliminate glitches that may occur in combinational circuits
 
-#### Reson for Glitches
-1.  Different gates have different propagation delays, and these delays can lead to temporary imbalances in signal timing. If inputs to different gates change at slightly different times, it can result in momentary glitches in the output.
-2. Signals may take different path lengths to reach different gates. Longer paths can introduce larger propagation delays, potentially causing timing mismatches and glitches.
-3. Race conditions occur when two or more signals arrive at a gate at nearly the same time, and the output of the gate depends on which signal arrives first. This can lead to unpredictable temporary output values before the circuit settles into a stable state.  
-
 #### Asynchronous Reset D flip-flop
-- The asynchronous reset feature allows you to reset the flip-flop's state to a specific value, irrespective of the clock signal
-- 
+- The asynchronous reset feature allows the user to reset the flip-flop's state to a specific value, irrespective of the clock signal
+- When the reset input is not active i.e. 0, the flip-flop operates as a standard D flip-flop, capturing the value at the D input on the rising edge of the clock.
+- When the reset input is active i.e. 1, the flip-flop's output is forced to 0 regardless of the clock or D input.
+
+`!gvim dff_asyncres_syncres.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/a235666a-338f-4d78-8226-ba5500907570)
+
+#### Asynchronous Set D flip-flop
+- When the set is high, the output of the flip-flop is forced to 1, irrespective of the clock signal.
+- When the set is low, the flip-flop operates as a standard D flip-flop, capturing the value at the D input on the rising edge of the clock
+`!gvim dff_async_set.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/7cd21b5b-4d4f-49ff-8c6c-c6019d6da147)
+
+#### Synchronous Reset D flip-flop
+- A synchronous reset D flip-flop is a type of flip-flop that includes a reset input that is synchronized with the clock signal. This means that the reset input will only take effect on a specific clock edge, typically the rising or falling edge of the clock.
+- During normal operation, when the reset input is not asserted, the flip-flop operates like a standard D flip-flop
+- When the reset input is asserted (active), the flip-flop's output is forced to 0
+`!gvim dff_syncres.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/1ea4756b-dcdc-46e4-a334-a319bac87e19)
+
 </details>

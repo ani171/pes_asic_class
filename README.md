@@ -500,7 +500,18 @@ In practice, a combination of both flat and hierarchical synthesis is often used
 
 <details>
 <summary>Flop Coding Styles</summary>
+
+- A flip-flop is a bistable multivibrator circuit element that can store one bit of data. It has two stable states and can be used to represent binary information.
+<br>
 	
+#### Requirement of flops
+- Flip-flops are used in sequential circuits to store data and create a controlled timing mechanism. They can help eliminate glitches that may occur in combinational circuits
+
+#### Reson for Glitches
+1.  Different gates have different propagation delays, and these delays can lead to temporary imbalances in signal timing. If inputs to different gates change at slightly different times, it can result in momentary glitches in the output.
+2. Signals may take different path lengths to reach different gates. Longer paths can introduce larger propagation delays, potentially causing timing mismatches and glitches.
+3. Race conditions occur when two or more signals arrive at a gate at nearly the same time, and the output of the gate depends on which signal arrives first. This can lead to unpredictable temporary output values before the circuit settles into a stable state.  
+
 #### Asynchronous Reset D flip-flop
 - The asynchronous reset feature allows you to reset the flip-flop's state to a specific value, irrespective of the clock signal
 - 

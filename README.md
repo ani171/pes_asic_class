@@ -459,17 +459,20 @@ write_verilog -noattr multiple_modules_hier.v
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/baa7f6be-4981-41a6-885f-3eb27e441929)
 - A NAND Implementation is seen, here.
 <br>
-Stacked PMOS Circuits
-- Stacked PMOS NOR requires multiple transistors to be stacked vertically, which leads to a more complex manufacturing process. This complexity can result in lower yields and higher manufacturing costs.
-- The stacked PMOS architecture tends to occupy more space compared to other memory cell configurations. This larger cell size translates to a lower storage density
-- Due to its larger cell size, stacked PMOS NOR flash has a lower bit density, meaning you can store fewer bits in the same area compared to other architectures like NAND
--  PMOS transistors are constructed using a p-type semiconductor for the channel region, and their carrier mobility tends to be lower than that of NMOS transistors, which use an n-type semiconductor for the channel. Due to the lower carrier mobility of PMOS transistors compared to NMOS transistors, stacked PMOS NOR flash memory cells might experience slower switching speeds, contributing to slower overall memory performance and longer access times.
+Stacked PMOS Circuits<br>
+- Stacked PMOS NOR requires multiple transistors to be stacked vertically, which leads to a more complex manufacturing process. This complexity can result in lower yields and higher manufacturing costs.<br>
+- The stacked PMOS architecture tends to occupy more space compared to other memory cell configurations. This larger cell size translates to a lower storage density<br>
+- Due to its larger cell size, stacked PMOS NOR flash has a lower bit density, meaning you can store fewer bits in the same area compared to other architectures like NAND<br>
+-  PMOS transistors are constructed using a p-type semiconductor for the channel region, and their carrier mobility tends to be lower than that of NMOS transistors, which use an n-type semiconductor for the channel. Due to the lower carrier mobility of PMOS transistors compared to NMOS transistors, stacked PMOS NOR flash memory cells might experience slower switching speeds, contributing to slower overall memory performance and longer access times.<br>
+
 ```
 write_verilog -noattr multiple_modules_flat.v
 !gvim multiple_modules_flat.v
 ```
+
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/3f303820-31c7-484c-9725-2d80f1529828)
-- Directly the AND and OR Gate are instantiated.
+
+- Directly the AND and OR Gate are instantiated.<br>
 
 ##### Hierarchial Synthesis
 In hierarchical synthesis, the design is organized into a hierarchy of modules, with each module representing a functional block or sub-component. Each module is synthesized independently, and then these synthesized modules are connected together to form the complete design.<br>
@@ -481,11 +484,11 @@ In hierarchical synthesis, the design is organized into a hierarchy of modules, 
 - Disadvantages<br>
 	- Introduces the challenge of correctly integrating modules and ensuring proper connectivity.<br>
 	- Some high-level optimizations might be more challenging due to module-level synthesis.<br>
-<br>
+
 ##### Flat Synthesis
 In flat synthesis, the entire design is treated as a single, monolithic unit. This means that the entire design hierarchy, including all sub-modules, is flattened into a single-level representation. All optimizations, logic synthesis, and technology mapping are performed on this single-level design.<br>
 - Advantages<br>
-	-Simplifies the synthesis process, as the entire design is treated as a single unit.<br>
+	- Simplifies the synthesis process, as the entire design is treated as a single unit.<br>
 	- Can lead to high-level optimizations across the entire design.<br>
 - Disadvantages<br>
 	- Can result in large intermediate files and complex optimization problems.<br>

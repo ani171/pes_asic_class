@@ -648,7 +648,6 @@ show
 
 </details>
 
-<details>
-<summary>Combinational and Sequential Optimizations</summary>
 
-</details>
+## Day 5 - Combinational and Sequential Optimizations
+

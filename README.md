@@ -497,3 +497,11 @@ In flat synthesis, the entire design is treated as a single, monolithic unit. Th
 <br>
 In practice, a combination of both flat and hierarchical synthesis is often used. Hierarchical synthesis is employed for managing the complexity of large designs, and then certain modules might be synthesized flat to achieve specific optimizations.
 </details>
+
+<details>
+<summary>Flop Coding Styles</summary>
+	
+#### Asynchronous Reset D flip-flop
+- The asynchronous reset feature allows you to reset the flip-flop's state to a specific value, irrespective of the clock signal
+- 
+</details>

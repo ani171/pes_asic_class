@@ -606,14 +606,15 @@ show dff_syncres
 
 <details>
 <summary>Optimizations</summary>
-
+1. 
+	
 `gvim mult_2.v`
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/997d5429-4c1c-40d4-80c9-89b1a16f737d)
 
 ```
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog mult_2.v
-synth -top mul2
+synth -top mult2
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/13e49f3a-741a-49ec-aa0d-f923b703a11b)
 
@@ -628,5 +629,23 @@ write_verilog -noattr mul2_netlist.v
 !gvim mul2_netlist.v
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/003a3205-3f1c-4da2-985f-aa233643f613)
+
+2. 
+`gvim mult_8.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/c2b05990-dec3-40d4-b9cb-758a4192e052)
+
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog mult_2.v
+synth -top mult8
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/c02573ca-b08a-4c45-a217-464a82b893cd)
+```
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show 
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/0f0964a4-4a7a-4657-aefd-0d22c244bcc3)
+
+
 
 </details>

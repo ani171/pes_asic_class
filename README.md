@@ -646,6 +646,9 @@ show
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/0f0964a4-4a7a-4657-aefd-0d22c244bcc3)
 
+</details>
 
+<details>
+<summary>Combinational and Sequential Optimizations</summary>
 
 </details>

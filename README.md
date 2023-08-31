@@ -602,6 +602,31 @@ show dff_syncres
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/a9129e69-7c7c-4377-89fa-ed5e0dbf807d)
 
+</details>
 
+<details>
+<summary>Optimizations</summary>
+
+`gvim mult_2.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/997d5429-4c1c-40d4-80c9-89b1a16f737d)
+
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog mult_2.v
+synth -top mul2
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/13e49f3a-741a-49ec-aa0d-f923b703a11b)
+
+```
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show 
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/0a31bf4c-b20a-42de-9d39-1dcac5e2dcbd)
+
+```
+write_verilog -noattr mul2_netlist.v
+!gvim mul2_netlist.v
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/003a3205-3f1c-4da2-985f-aa233643f613)
 
 </details>

@@ -520,8 +520,30 @@ Glitches are unwanted and unpredictable transitions in digital circuits that can
 - When the reset input is not active i.e. 0, the flip-flop operates as a standard D flip-flop, capturing the value at the D input on the rising edge of the clock.
 - When the reset input is active i.e. 1, the flip-flop's output is forced to 0 regardless of the clock or D input.
 
-`!gvim dff_asyncres_syncres.v`
-![image](https://github.com/ani171/pes_asic_class/assets/97838595/a235666a-338f-4d78-8226-ba5500907570)
+`!gvim dff_asyncres.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/55764322-f506-49c5-a02e-84db09adda94)
+
+Simulation
+```
+cd vsd/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+iverilog dff_asyncres.v tb_dff_asyncres.v
+./a.out
+gtkwave tb_dff_asyncres.v
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/76fd7567-c4a4-4fc1-bc13-e1e98caf3559)
+
+Synthesis
+```
+cd vsd/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_asyncres.v
+synth -top dff_asyncres
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show dff_asyncres
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/1a6636d6-39e5-4763-887d-f74b70f36eca)
 
 #### Asynchronous Set D flip-flop
 - When the set is high, the output of the flip-flop is forced to 1, irrespective of the clock signal.
@@ -529,11 +551,57 @@ Glitches are unwanted and unpredictable transitions in digital circuits that can
 `!gvim dff_async_set.v`
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/7cd21b5b-4d4f-49ff-8c6c-c6019d6da147)
 
+Simulation
+```
+cd vsd/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+iverilog dff_asyncres_set.v tb_dff_asyncres_set.v
+./a.out
+gtkwave tb_dff_asyncres_set.v
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/2e7a8b13-7845-43cb-b406-2f36d0124356)
+
+Synthesis
+```
+cd vsd/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_asyncres_set.v
+synth -top dff_asyncres_set
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show dff_asyncres_set
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/43612641-12a4-4de3-b146-86a7deae4a03)
+
 #### Synchronous Reset D flip-flop
 - A synchronous reset D flip-flop is a type of flip-flop that includes a reset input that is synchronized with the clock signal. This means that the reset input will only take effect on a specific clock edge, typically the rising or falling edge of the clock.
 - During normal operation, when the reset input is not asserted, the flip-flop operates like a standard D flip-flop
 - When the reset input is asserted (active), the flip-flop's output is forced to 0
 `!gvim dff_syncres.v`
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/1ea4756b-dcdc-46e4-a334-a319bac87e19)
+
+Simulation
+```
+cd vsd/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+iverilog dff_asyncres_set.v tb_dff_syncres.v
+./a.out
+gtkwave tb_dff_syncres.v
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/b2f29e47-ea44-4fc4-8dd2-3d19b007d47c)
+
+Synthesis
+```
+cd vsd/sky130RTLDesignAndSynthesisWorkshop/verilog_files
+yosys
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_syncres.v
+synth -top dff_syncres
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show dff_syncres
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/a9129e69-7c7c-4377-89fa-ed5e0dbf807d)
+
+
 
 </details>

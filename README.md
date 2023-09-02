@@ -879,5 +879,44 @@ show
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/0ced56bd-43fb-4f79-b6d5-f6d5c637a0f9)
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/2b57be12-b491-40de-9cd4-f6116e57d10c)
 
+</details>
+
+<details>
+<summary>Sequential optimisations for unused outputs </summary>
+
+### counter_opt
+
+`!gvim counter_opt.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/53ac3d58-98c7-4d3a-bfeb-b5e3822f6cdf)
+
+- Synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog counter_opt.v
+synth -top counter_opt
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/9381d58b-9b76-407f-9f6d-0b3d0381403c)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/d936ced3-7163-4208-91ce-9d1561c32da3)
+
+### counter_opt
+
+`!gvim counter_opt2.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/ca199c11-3f5f-48c6-9eb8-7d481926c84a)
+
+- Synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog counter_opt2.v
+synth -top counter_opt2
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/f34bf9e5-3f04-472d-b85f-1fdce95657bc)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/e6c0f5fd-f137-4b14-9991-3ae1e62512ce)
+
 
 </details>

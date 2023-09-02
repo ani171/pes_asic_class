@@ -725,7 +725,7 @@ show
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/b422fd93-93b2-40d1-a4bd-11c55ca67e90)
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/5ee0a6a1-0e72-407f-b44d-1707c617edbe)
 
-### opt_check4
+### multiple_module_opt
 
 `!gvim multiple_module_opt.v`
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/f41e17c1-bd50-44ee-88f7-1139d51cd7ae)
@@ -756,4 +756,15 @@ show
  	3. Sequential Logic Cloning replicates portions of sequential logic to alleviate bottlenecks and improve circuit throughput.
   	4. Retiming, Adjusts the placement of flip-flops within a circuit to optimize timing, balance critical paths, and enhance overall performance
 
+### dff_const1
+
+`!gvim dff_const1.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/901c3efa-77ea-48a4-add0-92e20d955df8)
+
+- Simulation
+```
+iverilog dff_const1.v tb_dff_const1.v
+./a.out
+gtkwave tb_dff_const1.vcd
+```
 </details>

@@ -651,3 +651,13 @@ show
 
 ## Day 5 - Combinational and Sequential Optimizations
 
+<details>
+<summary>Combinational Optimization</summary>
+
+- Combinational optimization deals with finding the best solution from a finite set of possible solutions.
+- It focuses on finding the best possible solution from a finite set of options for problems that involve discrete variables and have no inherent notion of time.
+- Two methods of computational optimization are
+	1.  Constant Propagation is a method of optimization that involves identifying and replacing variables with their constant values if they can be determined at compile-time. This optimization helps reduce the execution time of programs by avoiding redundant computations and simplifying expressions.
+ 2.  Boolean logic optimization is a process of simplifying and improving logical expressions in Boolean algebra. It aims to simplify Boolean expressions or logic circuits by reducing the number of terms, literals, and gates required to implement a given logical function.
+
+</details>

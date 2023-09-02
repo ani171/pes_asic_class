@@ -766,4 +766,118 @@ iverilog dff_const1.v tb_dff_const1.v
 ./a.out
 gtkwave tb_dff_const1.vcd
 ```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/4eb14917-08b9-41f9-b331-5c85d31b0dfb)
+
+- Synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog dff_const1.v
+synth -top dff_const1
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/9cec763b-d531-44ef-9c0e-545512272a29)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/1094a869-2537-48f1-af69-8151279f39b8)
+
+### dff_const2
+
+`!gvim dff_const2.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/1602d765-5a15-4aeb-97c5-7a8e9ca842b0)
+
+- Simulation
+```
+iverilog dff_const2.v tb_dff_const2.v
+./a.out
+gtkwave tb_dff_const2.vcd
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/4a0f4d5a-a06b-4879-8c21-ee245b2d5fdb)
+
+- Synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog dff_const2.v
+synth -top dff_const2
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/182f42e7-e1b1-4072-893e-7d28c4e41355)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/b888c1b4-2c9f-48af-8c97-b969597dd14f)
+
+### dff_const3
+
+`!gvim dff_const3.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/4d2f34cc-706b-42ac-b1d3-ae7490bfb641)
+
+- Simulation
+```
+iverilog dff_const3.v tb_dff_const3.v
+./a.out
+gtkwave tb_dff_const3.vcd
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/dd0dbe97-7288-4b67-963e-337a55b9041a)
+
+- Synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog dff_const3.v
+synth -top dff_const3
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/2b46c07f-3319-49fd-8c99-67a98162abba)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/47aa4f1e-72bc-46c5-913d-53597af3175b)
+
+### dff_const4
+
+`!gvim dff_const4.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/735fb6ba-8637-4fed-a7ad-c69cd6a76482)
+- Simulation
+```
+iverilog dff_const4.v tb_dff_const4.v
+./a.out
+gtkwave tb_dff_const4.vcd
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/8b1b9931-2a9b-4327-bfc1-bf53023b7ec6)
+
+- Synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog dff_const4.v
+synth -top dff_const4
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/f20c77a1-4f3e-4669-896b-37ef73e8dcd6)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/c58babb7-0724-454f-8d9c-32c7089256d8)
+
+### dff_const5
+
+`!gvim dff_const5.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/55f69d3c-63a3-4db3-af56-74cb642470a5)
+
+- Simulation
+```
+iverilog dff_const4.v tb_dff_const4.v
+./a.out
+gtkwave tb_dff_const4.vcd
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/1a86a42e-c651-4088-8f60-6801e6a5a1c4)
+
+- Synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog dff_const5.v
+synth -top dff_const5
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/0ced56bd-43fb-4f79-b6d5-f6d5c637a0f9)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/2b57be12-b491-40de-9cd4-f6116e57d10c)
+
+
 </details>

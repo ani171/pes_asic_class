@@ -901,7 +901,7 @@ show
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/9381d58b-9b76-407f-9f6d-0b3d0381403c)
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/d936ced3-7163-4208-91ce-9d1561c32da3)
 
-### counter_opt
+### counter_opt2
 
 `!gvim counter_opt2.v`
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/ca199c11-3f5f-48c6-9eb8-7d481926c84a)

@@ -1,4 +1,3 @@
-![image](https://github.com/ani171/pes_asic_class/assets/97838595/a7e3be52-ec14-4bd1-ba1e-97ca69e069be)# pes_asic_class
 # VLSI Physical Design for ASIC's
 <details>
 <summary>Installation of RISC-V Toolchain</summary>

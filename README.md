@@ -1,4 +1,4 @@
-# pes_asic_class
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/a7e3be52-ec14-4bd1-ba1e-97ca69e069be)# pes_asic_class
 # VLSI Physical Design for ASIC's
 <details>
 <summary>Installation of RISC-V Toolchain</summary>
@@ -659,6 +659,89 @@ show
 - Two methods of computational optimization are
 	1.  Constant Propagation is a method of optimization that involves identifying and replacing variables with their constant values if they can be determined at compile-time. This optimization helps reduce the execution time of programs by avoiding redundant computations and simplifying expressions.
 	2.  Boolean logic optimization is a process of simplifying and improving logical expressions in Boolean algebra. It aims to simplify Boolean expressions or logic circuits by reducing the number of terms, literals, and gates required to implement a given logical function.
+
+### opt_check
+
+`!gvim opt_check.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/f700bab9-eb63-47e5-b4f4-faaa6906346f)
+- Synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog opt_check.v
+synth -top opt_check
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/27e22aea-f124-4982-bc60-ef63e0a8f82d)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/d715d44f-b4f3-475b-83ce-21337f9a1397)
+
+### opt_check2
+
+`!gvim opt_check2.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/dc6f4bfa-ae82-4002-97f2-395400232d8e)
+- Synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog opt_check2.v
+synth -top opt_check2
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/70ff1896-d3dd-492e-bcbf-58b802af1159)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/fbe2296a-4615-4e21-bf8f-937bb86bbc86)
+
+### opt_check3
+
+`!gvim opt_check3.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/0a240573-20a6-4b9b-bf9e-27665feaf4b7)
+- Synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog opt_check3.v
+synth -top opt_check3
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/612b6960-ef18-489d-97f8-62ed4a6cc6c2)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/d9340801-1e8b-495c-b5eb-4dbb451305db)
+
+### opt_check4
+
+`!gvim opt_check4.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/799e8aab-a202-49b4-884a-840a00914f0b)
+- Synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog opt_check4.v
+synth -top opt_check4
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/b422fd93-93b2-40d1-a4bd-11c55ca67e90)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/5ee0a6a1-0e72-407f-b44d-1707c617edbe)
+
+### opt_check4
+
+`!gvim multiple_module_opt.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/f41e17c1-bd50-44ee-88f7-1139d51cd7ae)
+
+- Synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+read_verilog multiple_module_opt.v
+synth -top multiple_module_opt
+flatten
+opt_clean -purge
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/150f827a-cdf3-4d8a-afe0-2c2ce308d2bb)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/c627ce9f-b543-4fa3-9042-d140d08c7555)
 
 </details>
 

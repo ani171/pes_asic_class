@@ -658,6 +658,19 @@ show
 - It focuses on finding the best possible solution from a finite set of options for problems that involve discrete variables and have no inherent notion of time.
 - Two methods of computational optimization are
 	1.  Constant Propagation is a method of optimization that involves identifying and replacing variables with their constant values if they can be determined at compile-time. This optimization helps reduce the execution time of programs by avoiding redundant computations and simplifying expressions.
- 2.  Boolean logic optimization is a process of simplifying and improving logical expressions in Boolean algebra. It aims to simplify Boolean expressions or logic circuits by reducing the number of terms, literals, and gates required to implement a given logical function.
+	2.  Boolean logic optimization is a process of simplifying and improving logical expressions in Boolean algebra. It aims to simplify Boolean expressions or logic circuits by reducing the number of terms, literals, and gates required to implement a given logical function.
+
+</details>
+
+<details>
+<summary>Sequential Logic Optimization</summary>
+
+- Sequential logic optimization is the process of enhancing digital circuits that incorporate memory elements and time-dependent behavior, with the aim of improving performance, efficiency, and other key characteristics
+-  Sequential logic optimization directly impacts the performance and reliability of digital circuits and systems.
+-  Methods of computational optimization are
+	1. Sequential constant propagation is a process used in computer programming and software optimization to identify and replace variables with their constant values in a sequential or step-by-step manner. This technique aims to replace variable values with their known constant values at various stages of the logic circuit, optimizing the design for better performance and resource utilization.
+	2. State optimization is an optimization technique used in digital design to reduce the number of states in finite state machines (FSMs) while preserving the original functionality.
+ 	3. Sequential Logic Cloning replicates portions of sequential logic to alleviate bottlenecks and improve circuit throughput.
+  	4. Retiming, Adjusts the placement of flip-flops within a circuit to optimize timing, balance critical paths, and enhance overall performance
 
 </details>

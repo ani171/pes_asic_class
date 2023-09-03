@@ -942,15 +942,18 @@ show
 5. Run the simulation with compiled files. Debug and iterate as needed.
 6. Perform timing analysis if necessary.
 7. Generate test vectors for manufacturing tests.
-
-### Synthesis-Simulation Mismatch
+</details>
+<details>
+<summary>Synthesis-Simulation Mismatch</summary>
 
 - Synthesis-simulation mismatch is when there are differences between how a digital circuit behaves in simulation at the RTL level and how it behaves after gate-level synthesis.
 - This discrepancy can occur due to various reasons, such as timing issues, optimization conflicts, and differences in modeling between the simulation and synthesis tools.
 - To address it, ensure consistent tool versions, check synthesis settings, debug with simulation tools, and follow best practices in RTL coding and design.
 - Resolving these mismatches is crucial for reliable hardware implementation.
+</details>
 
-### Blocking and Non-blocking statements
+<details>
+<summary>Blocking and Non-blocking statements</summary>
 
 - Blocking Statements
 	- Blocking statements are executed sequentially in the order they appear in the code and have an immediate effect on signal assignments.

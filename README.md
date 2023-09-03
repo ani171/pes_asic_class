@@ -979,4 +979,14 @@ always @(posedge clk or posedge reset) begin
 end
 ```
 
+### Caveats With Blocking Statements
+- Blocking statements in Verilog are essential for modeling sequential logic and specifying the order of operations within procedural blocks.
+	- Race Conditions: When multiple blocking assignments are used within the same always block or initial block, there is a potential for race conditions. Race conditions occur when the final value of a signal depends on the execution order of assignments. To avoid race conditions, use non-blocking assignments or ensure that assignments do not depend on the order of execution.
+	- Combinational Loops: Using blocking assignments to create combinational feedback loops (combinational loops with no flip-flops) can lead to undefined behavior and simulation issues.
+ 	- Debugging Challenges: Debugging code with many blocking assignments can be challenging, especially when trying to track down timing-related issues.
+	- Limited for Testbenches: In testbench code, excessive use of blocking statements can lead to simulation race conditions that don't reflect real-world hardware behavior.
+	- Order Dependency: The order of blocking statements can affect simulation results, leading to race conditions or unintended behavior.
+	- Lack of Parallelism: Blocking statements do not accurately represent the parallel nature of hardware. In hardware, multiple signals can update concurrently, but blocking statements model sequential behavior. As a result, using blocking statements for modeling complex concurrent logic can lead to incorrect simulations.
+
 </details>
+

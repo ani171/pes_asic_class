@@ -934,5 +934,49 @@ show
 
 ### GLS using iVerilog
 
- 
+ ![image](https://github.com/ani171/pes_asic_class/assets/97838595/2250328e-ae37-45fb-b66c-01cf19a0d1f5)
+1. Write RTL code.
+2. Synthesize to generate gate-level netlist.
+3. Create a testbench in Verilog.
+4. Compile both netlist and testbench.
+5. Run the simulation with compiled files. Debug and iterate as needed.
+6. Perform timing analysis if necessary.
+7. Generate test vectors for manufacturing tests.
+
+### Synthesis-Simulation Mismatch
+
+- Synthesis-simulation mismatch is when there are differences between how a digital circuit behaves in simulation at the RTL level and how it behaves after gate-level synthesis.
+- This discrepancy can occur due to various reasons, such as timing issues, optimization conflicts, and differences in modeling between the simulation and synthesis tools.
+- To address it, ensure consistent tool versions, check synthesis settings, debug with simulation tools, and follow best practices in RTL coding and design.
+- Resolving these mismatches is crucial for reliable hardware implementation.
+
+### Blocking and Non-blocking statements
+
+- Blocking Statements
+	- Blocking statements are executed sequentially in the order they appear in the code and have an immediate effect on signal assignments.
+	- They are called "blocking" because they block the execution of subsequent statements until they are completed. Blocking statements are typically used within procedural blocks, such as always or initial blocks, to describe sequential behavior.
+	- Blocking assignments are typically used to describe combinational logic, where the order of execution doesn't matter, and each assignment depends on the previous one.
+```
+always @(posedge clk) begin
+    // Blocking assignments
+    a = b; 
+    c = a + 1; 
+end
+```
+
+- Non-blocking statements
+	- Non-blocking statements allow concurrent execution within a procedural block or always block, making them suitable for describing synchronous digital circuits.
+	- Non-blocking assignments are typically used to model sequential logic, like flip-flops and registers, where parallel execution is required.
+```
+reg [2:0] state, next_state;
+always @(posedge clk or posedge reset) begin
+    if (reset) begin
+        state <= 3'b000;
+    end else begin
+        // Non-blocking assignment to update the next state
+        next_state <= state + 1;
+    end
+end
+```
+
 </details>

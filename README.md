@@ -263,7 +263,7 @@ PicoRV-32 is a size-optimized RISC-V CPU Core that implements the RISC-V RV32IMC
 
 ## RTL Design using SKY130 Technology
 
-## Day 3 - Iverilog Design and Testbench
+## Day 1 - Iverilog Design and Testbench
 <details>
 <summary>Introduction</summary>
 - RTL Design is checked for adherence to the spec by simulating the design
@@ -408,7 +408,7 @@ write_verilog -noattr good_mux_netlist.v
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/4387c026-5906-4dee-b7bd-51c4bf0c3f44)
 </details>
 
-## Day 4 - Timing libs, Hierarchial and flat synthesis, and efficient flop coding styles
+## Day 2 - Timing libs, Hierarchial and flat synthesis, and efficient flop coding styles
 
 <details>
 <summary>Timing Dot libs</summary>
@@ -648,7 +648,7 @@ show
 </details>
 
 
-## Day 5 - Combinational and Sequential Optimizations
+## Day 3 - Combinational and Sequential Optimizations
 
 <details>
 <summary>Combinational Optimization</summary>
@@ -919,4 +919,20 @@ show
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/e6c0f5fd-f137-4b14-9991-3ae1e62512ce)
 
 
+</details>
+
+## Day 4 - GLS, blocking vs non-blocking, and Simulation-Synthesis mismatch
+
+<details>
+<summary>GLS Concepts and Flow using Iverilog </summary>
+
+### Gate-level Simulation
+- Gate-level simulation is a method used in electronics design to test and verify digital circuits at the level of individual logic gates and flip-flops.
+- It involves simulating the circuit using the actual logic gates and flip-flops that make up the design, as opposed to higher-level abstractions like RTL (Register Transfer Level) descriptions.
+- Gate-level simulation is commonly used in designs where precise timing and functionality are critical.
+- It operates at a lower abstraction level than higher-level simulations and is essential for debugging and ensuring circuit correctness.
+
+### GLS using iVerilog
+
+ 
 </details>

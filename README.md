@@ -1104,6 +1104,7 @@ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_
 ./a.out
 gtkwave tb_blocking_caveat.vcd
 ```
-![image](https://github.com/ani171/pes_asic_class/assets/97838595/ff410d46-1133-4c7b-b422-904360253603)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/12b3b637-91d1-4426-8131-e8737f767e2e)
+
 
 </details>

@@ -1068,5 +1068,42 @@ gtkwave tb_bad_mux.vcd
 ```
 ![image](https://github.com/ani171/pes_asic_class/assets/97838595/c9bd7a6e-b98a-4c4a-a61e-03565b119542)
 
+### blocking_caveat.v
+
+`!gvim blocking_caveat.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/e1677279-3b4b-48d6-a411-3a3327fb7e70)
+
+- Simulation
+
+```
+iverilog blocking_caveat.v tb_blocking_caveat.v
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/ec0d1ebb-133e-40c3-9f0f-232602699c02)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/273443eb-b861-4b44-9146-f8ce5d6f6c8a)
+
+- Synthesis
+
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog blocking_caveat.v
+synth -top blocking_caveat
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr blocking_caveat_netlist.v
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/46a49a56-2fb3-4ec4-a6ad-23200122e6db)
+
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/d5767436-9375-4a3b-9b7e-904a4d3ae9ad)
+
+- GLS to Gate level simulation
+
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_netlist.v tb_blocking_caveat.v
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/ff410d46-1133-4c7b-b422-904360253603)
 
 </details>

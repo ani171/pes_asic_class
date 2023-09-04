@@ -993,3 +993,80 @@ end
 
 </details>
 
+<details>
+<summary>Labwork</summary>
+
+### ternary_operator_mux
+
+`gvim teranry_operator_mux.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/b77b1863-6b5e-4d70-952a-db900c1300c4)
+
+ - Simulation
+
+```
+iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
+./a.out
+gtkwave tb_ternary_operator_mux.vcd
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/df9f1335-ab60-46c4-a719-050b628641c1)
+
+- Synthesis
+
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog ternary_operator_mux.v
+synth -top ternary_operator_mux
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr ternary_operator_mux_netlist.v
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/f44c3aa1-f147-42f1-aadd-dc42368384ce)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/298396f2-8b1d-4488-bb3e-b0796936a92c)
+
+- GLS to Gate level simulation
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_netlist.v tb_ternary_operator_mux.v
+./a.out
+gtkwave tb_ternary_operator_mux.vcd
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/66965062-4438-4be7-9483-16615e08ada3)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/36ac135e-86bb-4fbd-a0ce-7cdcc6a03a27)
+
+### bad_mux.v
+
+`!gvim bad_mux.v`
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/8d18f271-68c7-4a76-8e00-624984d4f8a9)
+
+- Simulation
+
+```
+iverilog bad_mux.v tb_bad_mux.v
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/264e6fe0-9363-4ac8-8659-c57fe1b4f79e)
+
+- Synthesis
+
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog bad_mux.v
+synth -top bad_mux
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr bad_mux_netlist.v
+show
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/003a20e2-7043-490a-af6b-43a123824249)
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/5eb248e9-15d2-4525-92a3-10b80e4e1f18)
+
+- GLS to Gate level simulation
+
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_netlist.v tb_bad_mux.v
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+![image](https://github.com/ani171/pes_asic_class/assets/97838595/c9bd7a6e-b98a-4c4a-a61e-03565b119542)
+
+
+</details>
